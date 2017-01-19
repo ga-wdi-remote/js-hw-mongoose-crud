@@ -39,7 +39,7 @@ app.use('/', donutsController);
 //======================
 // LISTENERS
 //======================
-//CONNECT MONGOOSE TO "mongoose_store"
+//CONNECT MONGOOSE TO "donut_store"
 
 
 //CREATE THE MONGOOSE CONNECTION and SET APP TO LISTEN to 3000
