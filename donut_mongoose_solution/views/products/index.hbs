@@ -1,0 +1,27 @@
+
+	<main>
+		<h2>Handmade, Fresh, Daily!</h2>
+
+
+		{{#each donut}}
+
+			<div class="donut-container">
+
+				<a href="/{{_id}}"><img class="main-img" src="{{img}}"/></a>
+
+				<h3><a href="/{{id}}">{{name}}</a></h3>
+
+				<p>${{price}} each </p>
+
+			</div>
+
+
+		{{/each}}
+
+
+		<a href="/new">Create a Donut</a>
+	</main>
+
+
+</body>
+</html>

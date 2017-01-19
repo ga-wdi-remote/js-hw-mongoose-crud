@@ -1,0 +1,38 @@
+<main>
+
+		<h2>You are viewing: {{donut.name}}</h2>
+
+		<a href="/">Return to Home Page</a>
+
+		<div class="donut-container-show">
+			<h2 id="donut-name">{{name}}</h2>
+			<img src="{{donut.img}}"/><br>
+			<h3>Description:</h3>
+				<p> {{donut.description}}</p><br>
+			<h3>Price:</h3>
+				<p id="cost">${{donut.price}} each</p><br>
+
+				<h3 id="quantity">
+
+
+		 				{{donut.qty}} remaining
+
+
+				</h3>
+
+				<br>
+
+				<a href="/{{donut._id}}/edit">Edit this Item</a>
+
+				<form action="/{{donut._id}}?_method=PUT" method="POST">
+							<input type="hidden" name="qty" value="{{donut.qty}}"><br>
+						  <input type="submit" value="BUY NOW">
+				</form>
+			</div>
+
+			<form action='/{{donut._id}}?_method=DELETE' method="POST">
+				<button>Delete Item</button>
+			</form>
+	</main>
+</body>
+</html>

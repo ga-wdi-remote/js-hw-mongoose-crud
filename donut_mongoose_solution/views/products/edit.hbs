@@ -1,0 +1,30 @@
+<main>
+
+	<h2>EDIT THIS DONUT!</h2>
+
+	<a href="/">Return to Home Page</a>
+
+	<div id="edit-form" class="donut-container-show">
+		<form action="/{{donut._id}}?_method=PUT" method="POST">
+			<strong>Name:</strong><br>
+				<input type="text" name="name" value="{{donut.name}}"><br><br>
+			<strong>Description:</strong><br>
+				<!-- <input type="text" name="description" value="<%= donut.description %>"><br><br> -->
+				<textarea name="description" rows="8" cols="40" value="{{donut.description}}">{{donut.description}}</textarea><br/><br>
+			<strong>Image URL:</strong><br>
+				<input type="text" name="img" value="{{donut.img}}")><br><br>
+			<strong>Price:</strong><br>
+				<input type="text" name="price" value="{{donut.price}}"><br><br>
+			<strong>Quantity:</strong><br>
+				<input type="text" name="qty" value="{{donut.qty}}"><br><br>
+			<button>SUBMIT</button>
+		</form>
+
+		<div id="img-preview">
+			<img src="{{donut.img}}">
+		</div>
+
+	</div>
+</main>
+</body>
+</html>
